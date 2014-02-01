@@ -1,0 +1,36 @@
+RailWorld Map: WHITTIER, ALASKA
+Author: Mirco Adam
+Creative Commons License (some rights reserved)
+
+The Alaska Railroad (ARR) Yard at Whittier's main purpose is to serve the rail barges that provide railcar interchange with Seattle, WA and Prince Rupert, BC.
+
+To my knowledge the barge to Seattle is operated by Lynden Tow Inc. and carries probably up to 50 railcars and in addition to these on an elevated deck structure also intermodal containers, vehicles, large comodities and machinery.
+
+The barge to Prince Rupert, Canada is operated by CN AquaTrain and able to carry up to 80 railcars. No individual container shipped.
+
+Very interesting: Whittier is only accessible via a combined railway and road tunnel located at the left side of this map.
+
+A very good reference to Whittier and the AAR is:
+http://www.alaskarails.org
+
+RailWorld: Barge Operations
+Unloading the Barge
+1) To pull cars from the barge, place a loco onto the magenta colored E/E portal situated upon the rail barge slip bridge. Set the brakes.
+2) Now create a string of car w/o loco travelling at 5mph consisting of about 4 to 7 cars entering at the appropriate portal (Barge Track 1-4). THe railcars will then roll onto the map and immediately couple to the engine parked on the slip. Select another track for each string of cars if you like or stick with Barge Track 1 (as I do).
+2b) Imported strings of railcars: Since Railcars imported without an engine stay invisible at the portal entry and cannot enter the map by itself, they need to be picked up by a loco (how convenient in this case). So run your barge switcher onto the respective slip track set throttle to idle with max 5mph (decresing) and apply brakes as soon as the cars are coupled. 
+Reverse your Train and pull of the barge slip. 
+3) Repeat above with each track. The CN AquaTrain barge is usually remoored at least once, since it features 7 tracks of up to 12 cars each. To simulate this simply go on until a total of 7 tracks have been switched. Switching is done by up to 3 Engines that also pull the form Whittier to Anchorage. No engine is permanently assigned to Whittier.
+
+Loading the Barge
+1) Push a string of cars over the barge slip portal until only the entire loco and a tiny hint of the first car is visible (the coupler ist sufficient). Set the brakes.
+2) Click onto the Coupler and "split" the train. The program will automaticalle place the uncoupled cars 5ft from the engine and therefore it disappears into the portal and is removed from the game.
+
+Interchanging with other maps
+This needs to be done prior to cars disappering through the respective barge portal. Export each string of cars to YardDuty. Import it into the destination map. 
+
+And that's it. You only need to visualize a railbarge in front of your inner eye. ;-)
+
+Comments and suggestions to mirc@tmo.de
+Thanks and enjoy!
+
+Mirco

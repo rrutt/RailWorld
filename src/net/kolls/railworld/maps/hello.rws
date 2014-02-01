@@ -1,0 +1,15 @@
+function toString() { return 'Hello'; }
+
+function init(pf) { }
+
+function draw(gc, os) { }
+
+function playFrameAction(act) { print(act); return false; }
+
+function trainAction(t, act) { return false; }
+
+function trainStep(t) { }
+
+function save() { return null; }
+
+function load(vals) { }
