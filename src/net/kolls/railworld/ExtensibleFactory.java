@@ -76,6 +76,7 @@ public class ExtensibleFactory<T extends SaveLoad> {
 	 *  
 	 *  @return <code>T[]</code>
 	 */
+	@SuppressWarnings("unchecked")
 	public ArrayList<T> allTypes() {
 		Iterator<T> it = mytypes.values().iterator();
 		//Object[] tar = new Object[mytypes.size()];
@@ -106,6 +107,7 @@ public class ExtensibleFactory<T extends SaveLoad> {
 	 * @return New item class instance 
 	 * @throws ClassNotFoundException If no item class is found to match the requested type.
 	 */
+	@SuppressWarnings("unchecked")
 	public T createInstance(String type) throws ClassNotFoundException {
 		
 		T val = mytypes.get(type);

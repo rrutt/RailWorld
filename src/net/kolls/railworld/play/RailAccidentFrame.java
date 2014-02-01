@@ -53,6 +53,7 @@ import net.kolls.railworld.tuic.TrainDirectionFinder;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class RailAccidentFrame extends JFrame {
 
 	

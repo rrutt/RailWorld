@@ -45,6 +45,7 @@ import net.kolls.railworld.tuic.TrainPainter;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class TrainCreator extends JFrame {
 
 	
@@ -52,7 +53,7 @@ public class TrainCreator extends JFrame {
 	private MultiLineTrainPanel ctrain;
 	private Vector<EESegment> ees;
 	private PlayFrame pf;
-	private JComboBox enters, speeds;
+	private JComboBox<String> enters, speeds;
 	private final int incr = Train.MAX_SPEED_MPH / Train.MAX_THROTTLE;
 	private Map<String,Car> sc;
 	
@@ -212,7 +213,7 @@ public class TrainCreator extends JFrame {
 		hp.setLayout(new BoxLayout(hp, BoxLayout.X_AXIS));
 		hp.add(new JLabel("Entering At"));
 		hp.add(Box.createHorizontalGlue());
-		enters = new JComboBox();
+		enters = new JComboBox<String>();
 		Iterator<EESegment> ei = ees.iterator();
 		while (ei.hasNext()) {
 			EESegment ee = ei.next();
@@ -227,7 +228,7 @@ public class TrainCreator extends JFrame {
 		hp.setLayout(new BoxLayout(hp, BoxLayout.X_AXIS));
 		hp.add(new JLabel("Speed"));
 		hp.add(Box.createHorizontalGlue());
-		speeds = new JComboBox();
+		speeds = new JComboBox<String>();
 		
 		int i;
 		for (i = 1; i <= Train.MAX_THROTTLE; i++) {

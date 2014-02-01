@@ -1,12 +1,8 @@
 package net.kolls.railworld.segment.sp;
 
-import java.awt.Color;
 import java.util.Date;
 import java.util.Map;
 
-import javax.swing.Icon;
-
-import net.kolls.railworld.Images;
 import net.kolls.railworld.SignalProgram;
 import net.kolls.railworld.Train;
 

@@ -39,6 +39,7 @@ import net.kolls.railworld.play.script.ScriptManager;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class MixControl extends TrainControl {
 
 	private TrainControl current, s ,ds;

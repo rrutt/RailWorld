@@ -160,6 +160,7 @@ public class EESegment extends TrackSegment {
 		gc.setPaint(p);
 	}
 	
+	@SuppressWarnings("serial")
 	private class EEEditUndo extends AbstractUndoableEdit {
 		private String _lbl, _lbl2;
 		private JPanel t;

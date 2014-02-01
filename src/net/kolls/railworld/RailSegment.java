@@ -47,6 +47,7 @@ public abstract class RailSegment {
 	
 	
 	
+	@SuppressWarnings("serial")
 	private class SetUndo extends AbstractUndoableEdit {
 		private int _p;
 		private RailSegment _v, _vn;

@@ -15,7 +15,6 @@ import net.kolls.railworld.segment.sp.Green;
 import net.kolls.railworld.segment.sp.GreenRed;
 import net.kolls.railworld.segment.sp.Red;
 import net.kolls.railworld.segment.sp.RedUTurn;
-import net.kolls.railworld.segment.sp.AbstractUL;
 import net.kolls.railworld.segment.sp.ULGreenRed;
 import net.kolls.railworld.segment.sp.ULUTurn;
 import net.kolls.railworld.segment.sp.Yellow;

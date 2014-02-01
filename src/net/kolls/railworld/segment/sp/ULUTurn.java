@@ -2,7 +2,6 @@ package net.kolls.railworld.segment.sp;
 
 
 import java.awt.Color;
-import java.util.Map;
 
 import javax.swing.Icon;
 

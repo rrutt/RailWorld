@@ -6,14 +6,10 @@ import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import net.kolls.railworld.GameLoop;
 import net.kolls.railworld.RailCanvas;
-import net.kolls.railworld.RailSegment;
-import net.kolls.railworld.play.PlayFrame;
 import net.kolls.railworld.play.script.DrawListener;
-import net.kolls.railworld.play.script.Script;
 
 
 

@@ -51,6 +51,7 @@ import net.kolls.railworld.segment.TrackSegment.TSEP;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class EditCanvas extends RailCanvas {
 
 	

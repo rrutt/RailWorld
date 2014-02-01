@@ -66,6 +66,7 @@ import java.util.prefs.Preferences;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class PlayFrame extends RailFrame {
 
 	/**
@@ -80,6 +81,7 @@ public class PlayFrame extends RailFrame {
 	public GameLoop gl;
 	private MetaData mmd;
 	private JToggleButton pause, cth;
+	@SuppressWarnings("rawtypes")
 	private JList dataList;
 	private JButton addb, impb, expb, delb, popb, mcb;
 	
@@ -211,7 +213,7 @@ public class PlayFrame extends RailFrame {
 		hp.setLayout(new BoxLayout(hp, BoxLayout.Y_AXIS));
 		hp.add(new JLabel("Entering At"));
 		hp.add(Box.createHorizontalGlue());
-		JComboBox enters = new JComboBox();
+		JComboBox<String> enters = new JComboBox<String>();
 		Iterator<EESegment> ei = ees.iterator();
 		while (ei.hasNext()) {
 			EESegment ee = ei.next();
@@ -294,6 +296,7 @@ public class PlayFrame extends RailFrame {
 	}
 	
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void addWidgets() {
 		
 		JPanel tch = new JPanel();

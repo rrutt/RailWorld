@@ -1,7 +1,6 @@
 package net.kolls.railworld.scripts;
 
 import java.awt.Graphics2D;
-import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.util.Date;
 import java.util.HashSet;
@@ -15,11 +14,7 @@ import net.kolls.railworld.play.RailAccident;
 import net.kolls.railworld.play.script.Script;
 import net.kolls.railworld.play.script.ScriptManager;
 import net.kolls.railworld.play.script.TrainActionListener;
-import net.kolls.railworld.scripts.SpeedLimits.TooFast;
-import net.kolls.railworld.scripts.SpringSwitches.SpringSwitch;
 import net.kolls.railworld.segment.Crossing;
-import net.kolls.railworld.segment.Switch;
-import net.kolls.railworld.segment.TrackSegment;
 
 /*
  * Copyright (C) 2010 Steve Kollmansberger
@@ -248,6 +243,7 @@ public class HornRequired implements Script, TrainActionListener {
 	 * @author Steve Kollmansberger
 	 *
 	 */
+	@SuppressWarnings("serial")
 	public class NoHornCrossing extends RailAccident {
 		/**
 		 * Create a "no horn" crossing accident.  Just calls the super constructor.
@@ -277,6 +273,7 @@ public class HornRequired implements Script, TrainActionListener {
 	 * @author Steve Kollmansberger
 	 *
 	 */
+	@SuppressWarnings("serial")
 	public class NoHornStart extends RailAccident {
 		/**
 		 * Create a "no horn" start accident.  Just calls the super constructor.

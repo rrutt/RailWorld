@@ -222,6 +222,7 @@ public class LUSegment extends TrackSegment {
 	
 	
 	
+	@SuppressWarnings("serial")
 	private class LUEditUndo extends AbstractUndoableEdit {
 		private Car[] lu, _lu;
 		private JPanel t;

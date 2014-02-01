@@ -43,6 +43,7 @@ import javax.swing.*;
  * 
  * @author Steve Kollmansberger
  */
+@SuppressWarnings("serial")
 public class AutoControl extends TrainControl {
 		
 	

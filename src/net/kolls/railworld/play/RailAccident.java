@@ -32,6 +32,7 @@ import net.kolls.railworld.Train;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public abstract class RailAccident extends RuntimeException {
 	
 	/**

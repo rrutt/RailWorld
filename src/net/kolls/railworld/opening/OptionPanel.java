@@ -35,6 +35,7 @@ import javax.swing.JPanel;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class OptionPanel extends JPanel {
 
 	private GridBagConstraints c;

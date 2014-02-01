@@ -40,6 +40,7 @@ import net.kolls.railworld.segment.LUSegment;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public abstract class TrainControl extends JPanel implements Runnable, SaveLoad {
 
 	/**

@@ -29,6 +29,7 @@ import java.awt.event.*;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class MiniViewer extends Canvas implements MouseListener, MouseMotionListener {
 	
 

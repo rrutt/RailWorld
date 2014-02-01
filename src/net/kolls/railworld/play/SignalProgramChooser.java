@@ -51,6 +51,7 @@ import net.kolls.railworld.segment.Signal;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class SignalProgramChooser extends JFrame implements AWTEventListener {
 
 

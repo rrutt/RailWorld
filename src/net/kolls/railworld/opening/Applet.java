@@ -58,6 +58,7 @@ import net.kolls.railworld.play.script.ScriptManager;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class Applet extends JApplet implements Runnable {
 	
 	private JPanel appletPic;
@@ -181,7 +182,7 @@ public class Applet extends JApplet implements Runnable {
 		JPanel freePlaySelector = new JPanel();
 		freePlaySelector.setLayout(new BoxLayout(freePlaySelector, BoxLayout.PAGE_AXIS));
 	
-		final JComboBox mapList = new JComboBox(rl.maps);
+		final JComboBox<?> mapList = new JComboBox<Object>(rl.maps);
 		freePlaySelector.add(makeRow(new JLabel("Select Map"), mapList));
 	
 		

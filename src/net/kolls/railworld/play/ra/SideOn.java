@@ -32,6 +32,7 @@ import net.kolls.railworld.play.RailAccident;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class SideOn extends RailAccident {
 
 	/**

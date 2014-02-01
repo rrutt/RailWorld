@@ -36,6 +36,7 @@ import javax.swing.*;
  * @author From Java forums, modified by Steve Kollmansberger
  *
  */
+@SuppressWarnings({ "serial", "rawtypes" })
 public class TrainListCellRenderer extends JPanel implements ListCellRenderer {
 
 	private PlayFrame pf;

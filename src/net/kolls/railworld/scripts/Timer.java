@@ -3,8 +3,6 @@ package net.kolls.railworld.scripts;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.AffineTransform;
-import java.util.Date;
-import java.util.Hashtable;
 import java.util.Map;
 
 import net.kolls.railworld.RailCanvas;

@@ -18,16 +18,29 @@ package net.kolls.railworld.tc;
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-import net.kolls.railworld.*;
-import net.kolls.railworld.segment.LUSegment;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.Hashtable;
+import java.util.Map;
 
-import javax.swing.*;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JToggleButton;
+import javax.swing.SwingConstants;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-import java.util.*;
-import java.awt.event.*;
-import java.awt.*;
-
-import javax.swing.event.*;
+import net.kolls.railworld.Train;
+import net.kolls.railworld.TrainControl;
 
 /**
  * The standard user control.  Provides a panel with throttle, brake, etc.
@@ -35,6 +48,7 @@ import javax.swing.event.*;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class UserControl extends TrainControl implements ItemListener, ChangeListener, ActionListener {
 	
 	private JSlider throttle;

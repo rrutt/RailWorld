@@ -34,13 +34,11 @@ import javax.imageio.ImageIO;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.border.Border;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -67,6 +65,7 @@ import net.kolls.railworld.play.script.ScriptManager;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class Opening extends JFrame implements ActionListener {
 
 	

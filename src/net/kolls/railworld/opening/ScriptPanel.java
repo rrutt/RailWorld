@@ -19,9 +19,6 @@ package net.kolls.railworld.opening;
  */
 
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
 import javax.swing.BoxLayout;
@@ -38,6 +35,7 @@ import net.kolls.railworld.play.script.ScriptManager;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class ScriptPanel extends JPanel {
 	
 	private CheckBoxList cbl;

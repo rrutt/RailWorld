@@ -14,11 +14,10 @@ import net.kolls.railworld.RailSegment;
 import net.kolls.railworld.Train;
 import net.kolls.railworld.car.AbstractCar;
 import net.kolls.railworld.play.PlayFrame;
-import net.kolls.railworld.play.Trains;
 import net.kolls.railworld.play.script.Script;
 import net.kolls.railworld.play.script.ScriptManager;
 import net.kolls.railworld.play.script.TrainActionListener;
-import net.kolls.railworld.segment.*;
+import net.kolls.railworld.segment.LUSegment;
 
 /*
  * Copyright (C) 2010 Steve Kollmansberger
@@ -52,6 +51,7 @@ public class Completer implements Script, TrainActionListener {
 	private RailSegment[] la;
 	private boolean pop = false;
 	
+	@SuppressWarnings("unused")
 	private Train trainToComplete;
 	private boolean[] cars;
 	

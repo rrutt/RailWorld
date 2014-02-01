@@ -37,6 +37,7 @@ import net.kolls.railworld.Sounds;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class ResourceLoader extends JProgressBar implements Runnable {
 
 	

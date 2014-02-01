@@ -53,6 +53,7 @@ import net.kolls.railworld.opening.Options;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public abstract class RailCanvas extends Canvas implements MouseListener,
 		MouseMotionListener {
 

@@ -2,8 +2,6 @@ package net.kolls.railworld.opening;
 
 import java.awt.BorderLayout;
 import java.awt.image.BufferedImage;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -13,8 +11,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import org.xml.sax.SAXException;
-
 import net.kolls.railworld.RailSegment;
 import net.kolls.railworld.io.MetaData;
 import net.kolls.railworld.io.RWMMapFilter;
@@ -22,6 +18,8 @@ import net.kolls.railworld.io.RWMReader;
 import net.kolls.railworld.io.YardMapFilter;
 import net.kolls.railworld.io.YardReader;
 import net.kolls.railworld.play.script.ScriptManager;
+
+import org.xml.sax.SAXException;
 
 /*
  * Copyright (C) 2010 Steve Kollmansberger

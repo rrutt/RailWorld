@@ -195,6 +195,7 @@ public class FourWay extends RailSegment {
 	public boolean singleton() { return true; }
 	
 	
+	@SuppressWarnings("serial")
 	private class FWEditUndo extends AbstractUndoableEdit {
 		
 		private JPanel t;

@@ -44,6 +44,7 @@ import java.util.Iterator;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("rawtypes")
 public class Trains implements ListModel, Iterable<Train> {
 	
 	

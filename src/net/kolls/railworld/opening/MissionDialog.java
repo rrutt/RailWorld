@@ -48,10 +48,10 @@ import net.kolls.railworld.play.script.Mission;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class MissionDialog extends JDialog {
 
 	private MissionPanel mp;
-	private JTextField missionDir;
 	private String misDir;
 	
 	/**

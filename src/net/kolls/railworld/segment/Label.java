@@ -139,6 +139,7 @@ public class Label extends RailSegment {
 	}
 
 	
+	@SuppressWarnings("serial")
 	private class LabelEditUndo extends AbstractUndoableEdit {
 		private Distance _size, _size2;
 		private Color _c, _c2;

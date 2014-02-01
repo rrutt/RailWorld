@@ -249,6 +249,7 @@ public class Switch extends RailSegment {
 		return null;
 	}
 	
+	@SuppressWarnings("serial")
 	private class SwitchEditUndo extends AbstractUndoableEdit {
 		
 		private JPanel t;

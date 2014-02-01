@@ -44,7 +44,7 @@ public class TimeQueue<T> {
 	 *
 	 * @param <T> Any type which is to be scheduled
 	 */
-	public class TimeValue<T> implements Comparable<TimeValue<T>> {
+	public class TimeValue implements Comparable<TimeValue> {
 		/**
 		 * The elapsed time at which to execute this value.
 		 */
@@ -65,19 +65,19 @@ public class TimeQueue<T> {
 			this.value = value;
 		}
 		@Override
-		public int compareTo(TimeValue<T> o) {
+		public int compareTo(TimeValue o) {
 			return new Long(elapsed).compareTo(new Long(o.elapsed));
 		}
 		
 	}
 	
-	private PriorityQueue<TimeValue<T>> _queue;
+	private PriorityQueue<TimeValue> _queue;
 	
 	/**
 	 * Construct a new, empty queue.
 	 */
 	public TimeQueue() {
-		_queue = new PriorityQueue<TimeValue<T>>();
+		_queue = new PriorityQueue<TimeValue>();
 	}
 	
 	/**
@@ -89,8 +89,8 @@ public class TimeQueue<T> {
 	 * @param elapsed The current elapsed time.
 	 * @return The next action whose time is prior to elapsed, or null.
 	 */
-	public TimeValue<T> poll(long elapsed) {
-		TimeValue<T> val = _queue.peek();
+	public TimeValue poll(long elapsed) {
+		TimeValue val = _queue.peek();
 		if (val == null)
 			return null;
 		
@@ -106,7 +106,7 @@ public class TimeQueue<T> {
 	 * 
 	 * @param item
 	 */
-	public void add(TimeValue<T> item) {
+	public void add(TimeValue item) {
 		_queue.add(item);
 	}
 	
@@ -118,7 +118,7 @@ public class TimeQueue<T> {
 	 * 
 	 */
 	public void add(long elapsed, T value) {
-		_queue.add(new TimeValue<T>(elapsed, value));
+		_queue.add(new TimeValue(elapsed, value));
 	}
 	
 }

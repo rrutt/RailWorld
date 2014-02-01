@@ -23,14 +23,7 @@ package net.kolls.railworld.play.script;
 
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
 import java.util.ArrayList;
-import javax.script.*;
-
 
 import net.kolls.railworld.RailSegment;
 import net.kolls.railworld.Train;
@@ -45,6 +38,7 @@ import net.kolls.railworld.play.RailAccident;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class ScriptManager extends ArrayList<Script> {
 
 	/**

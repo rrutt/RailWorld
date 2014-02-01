@@ -43,6 +43,7 @@ import javax.swing.border.EmptyBorder;
  * 
  * @author John Krasnay
  */
+@SuppressWarnings({ "serial", "rawtypes" })
 public class CheckBoxList extends JList {
 
     private boolean[] selected;
@@ -51,7 +52,8 @@ public class CheckBoxList extends JList {
      * Class constructor.
      * @param items Items with which to populate the list.
      */
-    public CheckBoxList(Object[] items) {
+    @SuppressWarnings("unchecked")
+	public CheckBoxList(Object[] items) {
         super(items);
         this.selected = new boolean[items.length];
         for (int i = 0; i < items.length; i++) {
@@ -95,7 +97,7 @@ public class CheckBoxList extends JList {
 
     private static Border noFocusBorder = new EmptyBorder(1, 1, 1, 1);
         
-    private class CheckListCellRenderer 
+	private class CheckListCellRenderer 
         extends JCheckBox 
         implements ListCellRenderer {
     
@@ -107,7 +109,7 @@ public class CheckBoxList extends JList {
             this.setBorder(noFocusBorder);
         }        
         
-        public Component getListCellRendererComponent(JList list, 
+		public Component getListCellRendererComponent(JList list, 
             Object value, int index, boolean isSelected, boolean cellHasFocus) {
         
             this.setText(value.toString());

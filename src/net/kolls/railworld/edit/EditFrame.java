@@ -60,6 +60,7 @@ import net.kolls.railworld.opening.MetaDataPanel;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class EditFrame extends RailFrame {
 
 	private EditCanvas jdb;

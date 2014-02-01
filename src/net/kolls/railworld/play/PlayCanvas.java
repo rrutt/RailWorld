@@ -38,6 +38,7 @@ import java.util.ArrayList;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class PlayCanvas  extends RailCanvas {
 	
 

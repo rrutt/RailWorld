@@ -44,6 +44,7 @@ import net.kolls.railworld.opening.Options;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public abstract class RailFrame extends JFrame implements ActionListener, WindowListener {
 	
 	

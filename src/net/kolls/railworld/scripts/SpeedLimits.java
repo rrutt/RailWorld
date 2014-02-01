@@ -2,12 +2,10 @@ package net.kolls.railworld.scripts;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.Point;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.Vector;
 
 import javax.swing.JPanel;
 
@@ -24,7 +22,6 @@ import net.kolls.railworld.segment.Crossing;
 import net.kolls.railworld.segment.Curve;
 import net.kolls.railworld.segment.EESegment;
 import net.kolls.railworld.segment.TrackSegment;
-import net.kolls.railworld.segment.sp.Green;
 
 /*
  * Copyright (C) 2010 Steve Kollmansberger
@@ -382,6 +379,7 @@ System.out.println(c);
 	 * @author Steve Kollmansberger
 	 *
 	 */
+	@SuppressWarnings("serial")
 	public class TooFast extends RailAccident {
 
 		/**

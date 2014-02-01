@@ -28,7 +28,6 @@ import net.kolls.railworld.CLoc;
 import net.kolls.railworld.Car;
 import net.kolls.railworld.Factories;
 import net.kolls.railworld.RailSegment;
-import net.kolls.railworld.Sounds;
 import net.kolls.railworld.Train;
 import net.kolls.railworld.car.Engine;
 import net.kolls.railworld.car.Passenger;
@@ -43,7 +42,6 @@ import net.kolls.railworld.scripts.missions.support.CountDownTimer;
 import net.kolls.railworld.scripts.missions.support.FadePrinter;
 import net.kolls.railworld.scripts.missions.support.StatusLine;
 import net.kolls.railworld.scripts.missions.support.TimeQueue;
-import net.kolls.railworld.scripts.missions.support.TimeQueue.TimeValue;
 import net.kolls.railworld.segment.EESegment;
 import net.kolls.railworld.segment.LUSegment;
 import net.kolls.railworld.segment.TrackSegment;
@@ -470,6 +468,7 @@ public class SeattleDispatcher implements Mission {
 
 	
 	
+	@SuppressWarnings("serial")
 	protected class DispatchWindow extends JFrame implements DrawListener {
 		
 		public DispatchPanel nw, ne, sw, se, pw, pe;
@@ -482,7 +481,7 @@ public class SeattleDispatcher implements Mission {
 		public void draw(Graphics2D gc, Rectangle onScreen) {
 			// no drawing ,just check action queue
 			
-			TimeQueue<DispatchPanel>.TimeValue<DispatchPanel> tv = dps.poll(mpf.gl.elapsed);
+			TimeQueue<DispatchPanel>.TimeValue tv = dps.poll(mpf.gl.elapsed);
 			if (tv != null) {
 				DispatchPanel next = tv.value;
 				
@@ -668,6 +667,7 @@ public class SeattleDispatcher implements Mission {
 	}
 	
 	
+	@SuppressWarnings("serial")
 	protected class DispatchPanel extends JPanel implements ActionListener {
 		
 		protected Train _t;

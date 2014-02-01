@@ -42,12 +42,14 @@ import net.kolls.railworld.play.script.Script;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class MetaDataPanel extends JPanel {
 	private JTextField scale, author,  title, track;
 	private JTextArea comment;
 	private MetaData md;
 	
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void construct(boolean editable, boolean hasSummary, Script[] scrs) {
 		
 		

@@ -39,6 +39,7 @@ import net.kolls.railworld.tuic.TrainPainter;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("serial")
 public class MultiLineTrainPanel extends JPanel {
 
 	/**
