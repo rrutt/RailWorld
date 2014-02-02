@@ -3,7 +3,7 @@
   <Meta>
     <Distance FeetPerPixel="1.0" Zoom="0.4749999999999999" />
     <Image File="TableTop-Basic1.jpg" />
-    <Map Author="Rick Rutt" Title="Table Top Model Railroad - Basic 1"><![CDATA[Back in high school I built this table top layout on a converted ping-pong table in my basement, based on a design in a hobby magazine. With two transformers, along with isolated track power segments, it provided hours of fun managing two trains on the simple layout.]]></Map>
+    <Map Author="Rick Rutt" Title="Table Top Model Railroad - Basic 1"><![CDATA[Back in high school I built this table top layout on a converted ping-pong table in my basement, based on a design in a hobby magazine.]]></Map>
     <Center X="1751" Y="999" />
   </Meta>
   <Segments>
