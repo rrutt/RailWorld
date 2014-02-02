@@ -154,12 +154,13 @@ public class Options extends JDialog implements ActionListener {
 		
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void addWidgets() {
 		setLayout(new BorderLayout());
 		
 		OptionPanel s = new OptionPanel();
 		
-		sound = new JComboBox<Object>(Sounds.SoundSystem.values());
+		sound = new JComboBox(Sounds.SoundSystem.values());
 		sound.setSelectedIndex(getSoundSystem().ordinal());
 		sound.setToolTipText("If you are having freezes or performance problems, try various sound systems.");
 		
@@ -183,7 +184,7 @@ public class Options extends JDialog implements ActionListener {
 		s.addLabeledControl("", accidents);
 
 		
-		fps = new JComboBox<Object>(new String[] {"Auto", "5", "10", "15", "20", "25"});
+		fps = new JComboBox(new String[] {"Auto", "5", "10", "15", "20", "25"});
 		fps.setEditable(true);
 		fps.setSelectedItem(getFPS() == 0 ? "Auto" : getFPS());
 		fps.setToolTipText("Frames per second the game should attempt to run.  Generally should be left on Auto");

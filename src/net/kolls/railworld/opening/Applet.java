@@ -139,6 +139,7 @@ public class Applet extends JApplet implements Runnable {
 		
 	}
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public void run() {
 
 
@@ -182,7 +183,7 @@ public class Applet extends JApplet implements Runnable {
 		JPanel freePlaySelector = new JPanel();
 		freePlaySelector.setLayout(new BoxLayout(freePlaySelector, BoxLayout.PAGE_AXIS));
 	
-		final JComboBox<?> mapList = new JComboBox<Object>(rl.maps);
+		final JComboBox mapList = new JComboBox(rl.maps);
 		freePlaySelector.add(makeRow(new JLabel("Select Map"), mapList));
 	
 		

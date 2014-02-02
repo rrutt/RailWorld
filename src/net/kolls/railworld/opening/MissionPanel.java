@@ -46,6 +46,7 @@ public class MissionPanel extends JPanel implements ListSelectionListener {
 	private JPanel briefing, _not_sel_brief;
 	private ScriptManager sm;
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public MissionPanel() {
 		super();
 		
@@ -53,7 +54,7 @@ public class MissionPanel extends JPanel implements ListSelectionListener {
 	
 		sm = ScriptManager.allMissions();
 	
-		missions = new JList<Object>(sm.toArray());
+		missions = new JList(sm.toArray());
 		_not_sel_brief = new JPanel();
 		_not_sel_brief.add(new JLabel("Select a mission to see a briefing"));
 		briefing = _not_sel_brief;

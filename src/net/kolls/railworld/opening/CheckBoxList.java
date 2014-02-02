@@ -71,9 +71,10 @@ public class CheckBoxList extends JList {
      * Overrides the JList method.
      * @return An array of selected values
      */
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
 	public Object[] getSelectedValues() {
-        ArrayList<Object> list = new ArrayList<Object>(this.selected.length);
+        ArrayList list = new ArrayList(this.selected.length);
         for (int i = 0; i < this.selected.length; i++) {
             if (selected[i]) {
                 list.add(this.getModel().getElementAt(i));
