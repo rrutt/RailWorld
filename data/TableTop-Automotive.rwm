@@ -3,7 +3,7 @@
   <Meta>
     <Distance FeetPerPixel="1.0" Zoom="0.475" />
     <Image File="TableTop-Autmotive.jpg" />
-    <Map Author="Rick Rutt" Title="Table Top Model Railroad v2"><![CDATA[This table top layout has a factory for hand-crafted cars and a shop to install sunroofs into those cars.  It also has a plastic and metal parts supply chain.]]></Map>
+    <Map Author="Rick Rutt" Title="Table Top Model Railroad - Automotive"><![CDATA[This table top layout has a factory for hand-crafted cars and a shop to install sunroofs into those cars.  It also has a plastic and metal parts supply chain. A passenger platform sits beside the main line.]]></Map>
     <Center X="1751" Y="1001" />
   </Meta>
   <Segments>
