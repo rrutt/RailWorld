@@ -150,12 +150,12 @@ public abstract class GameLoop {
 				if (avgd < 0) {
 					// slow timer down
 					CLOCK_WAIT *= 1.1;
-					System.out.println("Clock speed ("+CLOCK_WAIT+") slowed to " + fps() + " frames per second.");
+//[RRutt]					System.out.println("Clock speed ("+CLOCK_WAIT+") slowed to " + fps() + " frames per second.");
 				} 
 				if (avgd > (CLOCK_WAIT * 0.3) && CLOCK_WAIT > 40) {
 					// speed time up
 					CLOCK_WAIT -= (avgd * 0.2);
-					System.out.println("Clock speed ("+CLOCK_WAIT+") increased to " + fps() + " frames per second.");
+//[RRutt]					System.out.println("Clock speed ("+CLOCK_WAIT+") increased to " + fps() + " frames per second.");
 				}
 				stepstoadjust = 5;
 			} else stepstoadjust--;

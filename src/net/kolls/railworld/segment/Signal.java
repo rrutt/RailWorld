@@ -48,20 +48,24 @@ import net.kolls.railworld.segment.sp.Green;
  *
  */
 public class Signal extends RailSegment {
-
-	
+	/** 
+	 * [RRutt]
+	 * In order to allow a circular "table top" track, 
+	 * we need to limit how many track segments are walked looking for another signal
+	 * in the "from" direction.
+	 * This has the effect of omitting signals from switch entry legs that are part of
+	 * a circular loop in the track.
+	 * */
+	private final static int CYCLE_LIMIT = 10000;
 	
 	private Line2D ind, base;
-	
-	
-	
 	
 	// goes backward to look for end of track or another signal in the same direction
 	private static double distanceToNext(RailSegment a, RailSegment orig, boolean checkSig) {
 		double d = 0;
 		RailSegment tmp;
-		while (a != null) {
-			
+		int iterationCount = 0;
+		while ((a != null) && (iterationCount < CYCLE_LIMIT)) {			
 			if (checkSig && a instanceof Signal) 
 				if (((Signal)a).getDest(Signal.POINT_END) == orig) break;
 		
@@ -70,6 +74,7 @@ public class Signal extends RailSegment {
 			tmp = a;
 			a = a.dest(orig);
 			orig = tmp;
+			iterationCount++;
 		}
 		return d;
 		
