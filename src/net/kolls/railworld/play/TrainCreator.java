@@ -53,7 +53,8 @@ public class TrainCreator extends JFrame {
 	private MultiLineTrainPanel ctrain;
 	private Vector<EESegment> ees;
 	private PlayFrame pf;
-	private JComboBox<String> enters, speeds;
+	@SuppressWarnings("rawtypes")
+	private JComboBox enters, speeds;
 	private final int incr = Train.MAX_SPEED_MPH / Train.MAX_THROTTLE;
 	private Map<String,Car> sc;
 	
@@ -164,6 +165,7 @@ public class TrainCreator extends JFrame {
 		
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void addWidgets() {
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		JTabbedPane tabbedPane = new JTabbedPane();
@@ -213,7 +215,7 @@ public class TrainCreator extends JFrame {
 		hp.setLayout(new BoxLayout(hp, BoxLayout.X_AXIS));
 		hp.add(new JLabel("Entering At"));
 		hp.add(Box.createHorizontalGlue());
-		enters = new JComboBox<String>();
+		enters = new JComboBox();
 		Iterator<EESegment> ei = ees.iterator();
 		while (ei.hasNext()) {
 			EESegment ee = ei.next();
@@ -228,7 +230,7 @@ public class TrainCreator extends JFrame {
 		hp.setLayout(new BoxLayout(hp, BoxLayout.X_AXIS));
 		hp.add(new JLabel("Speed"));
 		hp.add(Box.createHorizontalGlue());
-		speeds = new JComboBox<String>();
+		speeds = new JComboBox();
 		
 		int i;
 		for (i = 1; i <= Train.MAX_THROTTLE; i++) {

@@ -56,7 +56,8 @@ import net.kolls.railworld.Sounds.SoundSystem;
 public class Options extends JDialog implements ActionListener {
 	
 	private static Preferences prefs;
-	private JComboBox<?> sound, fps;
+	@SuppressWarnings("rawtypes")
+	private JComboBox sound, fps;
 	private JCheckBox remember, metric, antialias, accidents;
 	
 	/**

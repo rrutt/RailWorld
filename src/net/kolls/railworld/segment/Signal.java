@@ -53,10 +53,10 @@ public class Signal extends RailSegment {
 	 * In order to allow a circular "table top" track, 
 	 * we need to limit how many track segments are walked looking for another signal
 	 * in the "from" direction.
-	 * This has the effect of omitting signals from switch entry legs that are part of
+	 * This might have the effect of omitting signals from switch entry legs that are part of
 	 * a circular loop in the track.
 	 * */
-	private final static int CYCLE_LIMIT = 10000;
+	private final static int CYCLE_LIMIT = 100000;
 	
 	private Line2D ind, base;
 	

@@ -195,6 +195,7 @@ public class PlayFrame extends RailFrame {
 		
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private Train importt() {
 		JFileChooser jfc = new JFileChooser();
 		
@@ -213,7 +214,7 @@ public class PlayFrame extends RailFrame {
 		hp.setLayout(new BoxLayout(hp, BoxLayout.Y_AXIS));
 		hp.add(new JLabel("Entering At"));
 		hp.add(Box.createHorizontalGlue());
-		JComboBox<String> enters = new JComboBox<String>();
+		JComboBox enters = new JComboBox();
 		Iterator<EESegment> ei = ees.iterator();
 		while (ei.hasNext()) {
 			EESegment ee = ei.next();
