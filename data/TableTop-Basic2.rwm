@@ -177,7 +177,7 @@
     <Label Angle="0.0" Blue="255" Green="255" ID="152" Label="Southside Passenger Platform" Red="255" Size="30.0" X="1901.7894736842109" Y="1779.684210526316" />
     <Label Angle="0.6108652381980153" Blue="255" Green="255" ID="153" Label="Eastside Freight Yard" Red="255" Size="30.0" X="2712.3157894736846" Y="1388.105263157895" />
     <Label Angle="-0.9948376736367678" Blue="255" Green="255" ID="154" Label="Lakeside Freight Yard" Red="255" Size="30.0" X="1522.8421052631581" Y="1114.4210526315792" />
-    <Label Angle="0.0" Blue="255" Green="0" ID="155" Label="Lake Wassamata" Red="255" Size="50.0" X="948.1052631578949" Y="964.9473684210528" />
+    <Label Angle="0.0" Blue="255" Green="255" ID="155" Label="Lake Wassamata" Red="255" Size="50.0" X="943.8947368421054" Y="962.842105263158" />
     <Label Angle="0.0" Blue="255" Green="255" ID="156" Label="Emerald Forest" Red="255" Size="50.0" X="2474.421052631579" Y="746.0000000000001" />
     <TrackSegment Begin="160" End="163" ID="157" X1="1318.6315789473686" X2="1282.8421052631581" Y1="1543.8947368421054" Y2="1569.1578947368423" />
     <TrackSegment Begin="160" End="161" ID="158" X1="1318.6315789473686" X2="1350.2105263157896" Y1="1543.8947368421054" Y2="1493.368421052632" />

@@ -66,7 +66,10 @@ public class RailAccidentFrame extends JFrame {
 	 * @param ra A {@link RailAccident} containing the accident data.
 	 * @param title Title of the map.  This is not the title of the accident report window.
 	 */
-	public RailAccidentFrame(PlayCanvas rc, RailAccident ra, String title) {
+	public RailAccidentFrame(
+			final PlayCanvas rc, 
+			final RailAccident ra, 
+			final String title) {
 		super("Rail Accident Report");
 		setIconImage(Images.frameIcon);
 		
@@ -87,7 +90,6 @@ public class RailAccidentFrame extends JFrame {
 		rar.setFont(f);
 		
 		rar.setAlignmentX(Component.CENTER_ALIGNMENT);
-		
 		
 		getContentPane().add(rar);
 		
@@ -118,7 +120,6 @@ public class RailAccidentFrame extends JFrame {
 		String t1adesc = tdf.adesc;/*direc(t1ang)*/
 		String t2adesc = "";
 		
-		
 		if (ra.t2 != null) {
 			tdf.reset();
 			tdf.act(ra.t2);
@@ -126,7 +127,6 @@ public class RailAccidentFrame extends JFrame {
 		}
 		
 		StringBuilder sb = new StringBuilder();
-		
 		
 		sb.append("About " + sdf.format(cdt) + " on " + sdf2.format(cdt) + ", a ");
 		// TODO: fix nullbound
@@ -144,27 +144,17 @@ public class RailAccidentFrame extends JFrame {
 		}
 		sb.append(".");
 		
-		
-		
-		
-		sb.append(" The accident occured in the ");
+		sb.append("\n\nThe accident occurred in the ");
 		sb.append(myloc(rc, ra.pos));
 		sb.append(" ");
 		sb.append(title);
 		sb.append(" area.");
 		
-		
-		
-		// should we be using line.seperator here?
+		// should we be using line.separator here?
 		
 		sb.append("\n\nThe train");
 		if (ra.t2 != null) sb.append("s");
-		sb.append(" involved ");
-		if (ra.t2 != null) sb.append("have"); else sb.append("has");
-		sb.append(" been removed from play.  The game is paused.");
-		
-		
-		
+		sb.append(" involved will be removed from play.\nThe game is currently paused.");
 		
 		desc.setText(sb.toString());
 		desc.setLineWrap(true);
@@ -186,17 +176,6 @@ public class RailAccidentFrame extends JFrame {
 		rc.draw(g, ra.pos, 128, 128, Distance.getDefaultZoom(), false);
 		g.dispose();
 		
-		// got train info and graphic
-		// remove trains
-		
-		rc.trains.remove(ra.t1);
-		if (ra.t2 != null)
-			rc.trains.remove(ra.t2);
-		if (rc.trains.getSelectedTrain() == ra.t1 ||
-			rc.trains.getSelectedTrain() == ra.t2)
-				rc.trains.select(null, null);
-		
-		
 		sc.add(new JLabel(new ImageIcon(bi)));
 		sc.add(Box.createRigidArea(new Dimension(5,5)));
 		JLabel scl = new JLabel();
@@ -212,6 +191,7 @@ public class RailAccidentFrame extends JFrame {
 		JButton ok = new JButton("OK");
 		ok.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				removeTrains(rc, ra);
 				dispose();
 			}
 		});
@@ -223,8 +203,15 @@ public class RailAccidentFrame extends JFrame {
 		
 		pack();
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		
-		
+	}
+
+	private void removeTrains(PlayCanvas rc, RailAccident ra) {
+		rc.trains.remove(ra.t1);
+		if (ra.t2 != null)
+			rc.trains.remove(ra.t2);
+		if (rc.trains.getSelectedTrain() == ra.t1 ||
+			rc.trains.getSelectedTrain() == ra.t2)
+				rc.trains.select(null, null);
 	}
 	
 	private void appendTrainInfo(Train t, StringBuilder sb) {
