@@ -44,18 +44,18 @@ import net.kolls.railworld.play.script.Script;
  */
 @SuppressWarnings("serial")
 public class MetaDataPanel extends JPanel {
+	private static final int TEXT_ROWS = 10;
+	private static final int TEXT_COLUMNS = 50;
+	
 	private JTextField scale, author,  title, track;
 	private JTextArea comment;
 	private MetaData md;
 	
-	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void construct(boolean editable, boolean hasSummary, Script[] scrs) {
-		
-		
 		OptionPanel s = new OptionPanel();
 		
-		title = new JTextField(20);
+		title = new JTextField(TEXT_COLUMNS);
 		title.setEditable(editable);
 		title.setText(md.title);
 		s.addLabeledControl("Title", title);
@@ -65,15 +65,12 @@ public class MetaDataPanel extends JPanel {
 		scale.setText(Double.toString(md.feetPerPixel));
 		s.addLabeledControl("Scale (ft/px)", scale);
 		
-		
-		
-		
-		author = new JTextField(20);
+		author = new JTextField(TEXT_COLUMNS);
 		author.setEditable(editable);
 		author.setText(md.author);
 		s.addLabeledControl("Author", author);
 		
-		comment = new JTextArea(5,20);
+		comment = new JTextArea(TEXT_ROWS,TEXT_COLUMNS);
 		comment.setEditable(editable);
 		comment.setText(md.comment);
 		comment.setLineWrap(true);
@@ -81,29 +78,20 @@ public class MetaDataPanel extends JPanel {
 		s.addLabeledControl("Comment", sp);
 		
 		if (hasSummary) {
-		
 			track = new JTextField(5);
 			track.setEditable(false);
 			double miles = md.track / 5280.0;
 			track.setText(NumberFormat.getInstance().format(miles));
 			s.addLabeledControl("Track (miles)", track);
-			
-			
-			
-		
 		}
-		
 		
 		if (scrs != null) {
 			JList lscr = new JList(scrs);
 
 			s.addLabeledControl("Active Scripts", lscr);
-		
 		}
 		
-		
 		s.setAlignmentX(Component.CENTER_ALIGNMENT);
-		
 		
 		JPanel p = new JPanel();
 		
@@ -114,12 +102,9 @@ public class MetaDataPanel extends JPanel {
 		p.add(Box.createVerticalGlue());
 		
 		setLayout(new BoxLayout(this, BoxLayout.LINE_AXIS));
-		add(Box.createRigidArea(new Dimension(5,0)));
+		add(Box.createRigidArea(new Dimension(TEXT_ROWS,0)));
 		add(p);
-		add(Box.createRigidArea(new Dimension(5,0)));
-	
-		
-		
+		add(Box.createRigidArea(new Dimension(TEXT_ROWS,0)));
 	}
 	
 	/**
@@ -138,7 +123,6 @@ public class MetaDataPanel extends JPanel {
 		scale.setText("");
 		
 		//track.setText("N/A");
-		
 	}
 	
 	/**
@@ -153,11 +137,7 @@ public class MetaDataPanel extends JPanel {
 		
 		md = m;
 		
-		
 		construct(editable, true, scrs);
-			
-		
-		
 	}
 	
 	/**
@@ -179,7 +159,5 @@ public class MetaDataPanel extends JPanel {
 		}
 		
 		return md;
-		
 	}
-	
 }
