@@ -35,7 +35,7 @@ The original set of RailWorld maps are available at this web site: <http://www.k
 The following additional _table top_ model maps are available in the **data** sub-folder of this GitHub repository:
 
 - **TableTop-Basic** A simple layout based on a hobby magazine.
-- **TableTop-Extended** An extened version of that hobby magazine layout.
+- **TableTop-Extended** An extended version of that hobby magazine layout.
 - **TableTop-Automotive** An imaginary supply chain for a factory for hand-crafted cars.
 
 A pair of actual layouts based on satellite imagery are also included:
