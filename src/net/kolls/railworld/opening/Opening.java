@@ -73,7 +73,7 @@ public class Opening extends JFrame implements ActionListener {
 	/**
 	 * Current Rail World version
 	 */
-	public static final String version = "0.9b";
+	public static final String version = "0.9b-RRutt";
 	
 	private JFrame f;
 	
