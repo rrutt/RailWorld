@@ -30,7 +30,7 @@ License details are available in this repository in the file **gpl.txt**
 
 ### Track Maps
 
-The original set of RailWorld maps are available at this web site: <http://www.kolls.net/rwwiki/index.php?title=Maps>
+The original set of RailWorld maps are available at this web site: <https://www.kolls.net/railworld/maps/>
 
 The following additional _table top_ model maps are available in the **data** sub-folder of this GitHub repository:
 
@@ -55,13 +55,3 @@ A pair of actual layouts based on satellite imagery are also included:
 - Compiled for Java 7 (JRE 1.7)
 
 The runnable Java JAR file and source code files for version **0.9b-RRutt** are available from this GitHub.com repository: <https://github.com/rrutt/RailWorld.git>
-
-#### Prior Versions
-
-Refer to <http://www.kolls.net/rwwiki/index.php?title=ChangeLog>
-
-The most recent version at that site is **0.9a** released 05-02-2010.
-
-The runnable Java JAR file and source code ZIP file for version **0.9a** are available from this web page: <http://www.kolls.net/rwwiki/index.php?title=Download>
-
-The JAR file at that site has been compiled for Java 6 (JRE 1.6)
