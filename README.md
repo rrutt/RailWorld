@@ -2,7 +2,7 @@
 
 This is a _fork_ of the RailWorld open source software that was originally made by Steve Kollmansberger in Java. Minor revisions have been made by Rick Rutt.
 
-The primary web site for RailWorld resides at <http://www.kolls.net/rwwiki/index.php?title=Rail_World>
+The primary web site for the original RailWorld resides at <https://sourceforge.net/projects/railworld/>
 
 The following description is from that site:
 
