@@ -48,6 +48,7 @@ import org.xml.sax.helpers.DefaultHandler;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("deprecation")
 public class RWMReader {
 	
 	/**

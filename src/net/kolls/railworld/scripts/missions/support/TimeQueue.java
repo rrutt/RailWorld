@@ -66,7 +66,7 @@ public class TimeQueue<T> {
 		}
 		@Override
 		public int compareTo(TimeValue o) {
-			return new Long(elapsed).compareTo(new Long(o.elapsed));
+			return Long.valueOf(elapsed).compareTo(o.elapsed);
 		}
 		
 	}

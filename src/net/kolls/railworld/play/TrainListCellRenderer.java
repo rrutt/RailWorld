@@ -148,7 +148,7 @@ public class TrainListCellRenderer extends JPanel implements ListCellRenderer {
 	
 	
 	
-	final int ispeed = new Double(myT.vel()).intValue();
+	final int ispeed = (int) myT.vel();
 	final String ft = NumberFormat.getInstance().format(myT.length().feet());
 	final String w = NumberFormat.getInstance().format(myT.weight());
 	text = Integer.toString(ispeed) + " MPH, " + ft + " Feet, " + w + " Tons";

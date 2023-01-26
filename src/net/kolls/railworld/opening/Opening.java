@@ -67,26 +67,21 @@ import net.kolls.railworld.play.script.ScriptManager;
  */
 @SuppressWarnings("serial")
 public class Opening extends JFrame implements ActionListener {
-
-	
 	
 	/**
 	 * Current Rail World version
 	 */
-	public static final String version = "0.9b-RRutt";
+	public static final String version = "1.0.0+20230125";
 	
 	private JFrame f;
 	
 	private void run(final RailFrame frame) {
-		
-		
 		
 //		 if we just fire it up in this code, it will be running in the event
 		// loop thread, and block all events!
 		// so we must spawn it into a different thread
         Thread t  = new Thread(new Runnable() {
         	public void run() {
-				
         		
 				frame.setVisible(true);
 				
@@ -103,14 +98,11 @@ public class Opening extends JFrame implements ActionListener {
 				frame.dispose();
 				setVisible(true);
 				
-				
         	}
 	        
         });
         t.start();
 	}
-	
-	
 	
 	
 	/**

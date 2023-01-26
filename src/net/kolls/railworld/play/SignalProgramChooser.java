@@ -23,14 +23,12 @@ package net.kolls.railworld.play;
 
 import java.awt.AWTEvent;
 import java.awt.Dimension;
-import java.awt.Event;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.AWTEventListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
-import java.security.AccessControlException;
 import java.util.ArrayList;
 
 import javax.swing.ButtonGroup;
@@ -88,21 +86,6 @@ public class SignalProgramChooser extends JFrame implements AWTEventListener {
 		
 		setUndecorated(true);
 		
-		// check to see if we are in an applet
-		// if so, re-enable window decorations
-		// otherwise the security manager will not display the window
-		// this is kind of lame and could only be solved by
-		// using a panel inside the main window, or signing the applet
-		SecurityManager security = System.getSecurityManager();
-	    if (security != null) {
-	         if (security.checkTopLevelWindow(this) == false)
-	        	 setUndecorated(false);
-	    }
-	     
-		
-		
-		
-		
 		JPanel sig = new JPanel();
 		sig.setLayout(new GridLayout(0,3));
 		
@@ -111,30 +94,16 @@ public class SignalProgramChooser extends JFrame implements AWTEventListener {
 		ArrayList<SignalProgram> sps = Factories.sps.allTypes();
 		for (int i = 0; i < sps.size(); i++) {
 			sig.add(createButton(sps.get(i), signal));
-			
 		}
 		
-		
-		try {
-			Toolkit.getDefaultToolkit().addAWTEventListener(this, Event.MOUSE_EXIT | Event.MOUSE_ENTER);
-		} catch (AccessControlException ex) {
-			// applet doesn't allow this
-		}
-		
-		
+		Toolkit.getDefaultToolkit().addAWTEventListener(this, AWTEvent.MOUSE_EVENT_MASK);
 
 		add(sig);
 		pack();
-		
-	
 	}
 	
 	private void close() {
-		try {
-			Toolkit.getDefaultToolkit().removeAWTEventListener(this);
-		} catch (AccessControlException ex) {
-			// applet doesn't allow this
-		}
+		Toolkit.getDefaultToolkit().removeAWTEventListener(this);
 		dispose();
 	}
 	

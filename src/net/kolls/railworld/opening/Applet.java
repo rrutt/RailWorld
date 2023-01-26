@@ -22,6 +22,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -58,13 +59,15 @@ import net.kolls.railworld.play.script.ScriptManager;
  * @author Steve Kollmansberger
  *
  */
-@SuppressWarnings("serial")
+@SuppressWarnings({ "serial", "removal" })
 public class Applet extends JApplet implements Runnable {
 	
 	private JPanel appletPic;
 	private Thread tlr;
 	private JLabel lbl;
 	private ResourceLoader rl;
+	
+	public static Frame frame = null;
 	
 	/**
 	 * Creates the applet.  This is called by the browser or applet viewer.
@@ -149,25 +152,9 @@ public class Applet extends JApplet implements Runnable {
 			e1.printStackTrace();
 		}
 		
-		
-		
 		getContentPane().removeAll();
 		
-		
-		
-		
-		
 		final JButton b = new JButton("START!");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		getContentPane().add(appletPic, BorderLayout.NORTH);
 		
@@ -347,5 +334,17 @@ public class Applet extends JApplet implements Runnable {
 		return p;
 		
 	}
+	
+	public static void main(String[] args) {
+		  int width = 600, height = 400;
+		  frame = new Frame("RailWorld");
+		  Applet app = new Applet();
+		  frame.add(app);
+		  frame.pack();
+		  frame.setLocation(100, 100);
+		  frame.setSize(width, height);
+		  frame.setVisible(true);
+		  app.init();
+		  app.start();
+		 }
 }
-

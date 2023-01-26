@@ -207,14 +207,14 @@ public class YardReader {
 			i = l.indexOf('=');
 			if (i < 1) continue;
 
-			idx = new Integer(l.substring(1,i)).intValue(); // L#=
+			idx = Integer.parseInt(l.substring(1,i)); // L#=
 
 
 			st = new StringTokenizer(l.substring(i+1),":",false);
 	
 		    while (st.hasMoreTokens()) {
 				try {
-					x = new Float(st.nextToken()).intValue();
+					x = (int) Float.parseFloat(st.nextToken());
 				} catch (Exception e) { cnt++; continue; }
 				
 				switch (cnt) {
