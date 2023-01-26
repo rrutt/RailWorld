@@ -28,6 +28,16 @@ RailWorld is open source software under the GNU General Public Licesnse, Version
 
 License details are available in this repository in the file **gpl.txt**
 
+### Running RailWorld
+
+Download the **RailWorld.jar** file.
+
+Then use this command line in a Windows Command Prompt or Linux Terminal window:
+
+    java -jar RailWorld.jar
+
+Depending on how Java is installed on your computer, you may be able to simply double-click on the **JavaWorld.jar** file on a file explorer windo, 
+
 ### Track Maps
 
 The original set of RailWorld maps are available at this web site: <https://www.kolls.net/railworld/maps/>
@@ -49,11 +59,15 @@ The JavaDoc generated documentation is available at  **<https://www.kolls.net/ra
 
 ### Change Log
 
-#### Version 1.0.0+20230125
+#### Version 1.0.0+20230126
 
-This version has been revised to compile using JDK version 17 LTS.
+This version has been revised to compile using **JDK version 17 LTS**.
 
-The program still uses the deprecated **Applet** and **JApplet** classes, so this version contains corresponding **@SuppressWarnings** annotations in some of the source code files. 
+The supplied runnable **RailWorld.jar** file has been compiled using **JDK version 17 LTS**.
+
+The program still uses the deprecated **Applet** and **JApplet** classes, so this version contains corresponding **@SuppressWarnings** annotations in some of the source code files.
+
+The **data** sub-folder now contains the **seattle** and **tumwater** map and image files required for the **Seattle Dispatcher** and **Brewsky Run** mission game scenarios, respectively. 
 
 #### Version 0.9b-RRutt
 
