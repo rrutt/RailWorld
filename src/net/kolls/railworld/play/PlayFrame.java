@@ -401,7 +401,7 @@ public class PlayFrame extends RailFrame {
 		
 		
 		
-		rightPanel.add(bottom, BorderLayout.SOUTH);
+		leftPanel.add(bottom, BorderLayout.SOUTH);
 		
 		
 		dataList.addListSelectionListener(new ListSelectionListener() {
