@@ -56,6 +56,11 @@ public abstract class RailFrame extends JFrame implements ActionListener, Window
 	protected MiniViewer miniv;
 	
 	/**
+	 * The left panel
+	 */
+	protected JPanel leftPanel;
+	
+	/**
 	 * The right panel
 	 */
 	protected JPanel rightPanel;
@@ -90,28 +95,31 @@ public abstract class RailFrame extends JFrame implements ActionListener, Window
 		miniv.setMaximumSize(new Dimension(195,195));
 		miniv.setBackground(Color.white);
 
-		rightPanel = new JPanel();
-		rightPanel.setLayout(new BorderLayout());
+		leftPanel = new JPanel();
+		leftPanel.setLayout(new BorderLayout());
 		JPanel mp = new JPanel();
 		mp.setBorder(BorderFactory.createRaisedBevelBorder());
 		mp.setPreferredSize(new Dimension(205,205));
 		mp.setMaximumSize(new Dimension(205,205));
 		mp.add(miniv);
-		rightPanel.add(mp, BorderLayout.NORTH);
+		leftPanel.add(mp, BorderLayout.NORTH);
 		
 		// since tch looks ugly butting up against the edge,
 		// add filler
 		JPanel jp = new JPanel();
 		jp.setPreferredSize(new Dimension(5,5));
-		rightPanel.add(jp, BorderLayout.WEST);
+		leftPanel.add(jp, BorderLayout.WEST);
 		jp = new JPanel();
 		jp.setPreferredSize(new Dimension(5,5));
-		rightPanel.add(jp, BorderLayout.EAST);
+		leftPanel.add(jp, BorderLayout.EAST);
 		
 		
+		rightPanel = new JPanel();
+		rightPanel.setLayout(new BorderLayout());
 		
 		
 		getContentPane().setLayout(new BorderLayout());
+		getContentPane().add(leftPanel, BorderLayout.WEST);
 		getContentPane().add(rightPanel, BorderLayout.EAST);
 		
 		toolBar = new JToolBar();
