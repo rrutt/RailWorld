@@ -22,6 +22,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -58,13 +59,15 @@ import net.kolls.railworld.play.script.ScriptManager;
  * @author Steve Kollmansberger
  *
  */
-@SuppressWarnings("serial")
+@SuppressWarnings({ "serial", "removal" })
 public class Applet extends JApplet implements Runnable {
 	
 	private JPanel appletPic;
 	private Thread tlr;
 	private JLabel lbl;
 	private ResourceLoader rl;
+	
+	public static Frame frame = null;
 	
 	/**
 	 * Creates the applet.  This is called by the browser or applet viewer.
@@ -135,8 +138,6 @@ public class Applet extends JApplet implements Runnable {
 		
 		Thread afl = new Thread(this);
 		afl.start();
-		
-		
 	}
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
@@ -149,25 +150,9 @@ public class Applet extends JApplet implements Runnable {
 			e1.printStackTrace();
 		}
 		
-		
-		
 		getContentPane().removeAll();
 		
-		
-		
-		
-		
 		final JButton b = new JButton("START!");
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		getContentPane().add(appletPic, BorderLayout.NORTH);
 		
@@ -175,9 +160,7 @@ public class Applet extends JApplet implements Runnable {
 		selector.setLayout(new BoxLayout(selector, BoxLayout.PAGE_AXIS));
 		selector.setOpaque(false);
 		
-		
 		final JTabbedPane freeOrMission = new JTabbedPane();
-		
 		
 		// BEGIN FREE PLAY
 		JPanel freePlaySelector = new JPanel();
@@ -188,11 +171,8 @@ public class Applet extends JApplet implements Runnable {
 	
 		
 		final ScriptPanel sp = new ScriptPanel();
-				
 		
 		freePlaySelector.add(makeRow(new JLabel("Select Script(s) to Use"), sp));
-	
-		
 		
 		// END FREE PLAY
 		freeOrMission.addTab("Free Play", freePlaySelector);
@@ -210,7 +190,6 @@ public class Applet extends JApplet implements Runnable {
 		
 		getContentPane().add(Box.createHorizontalStrut(10), BorderLayout.WEST);
 		getContentPane().add(Box.createHorizontalStrut(10), BorderLayout.EAST);
-		
 		
 		lbl.setText("Rail World Version " + Opening.version + " (Applet)");
 		getContentPane().add(lbl, BorderLayout.SOUTH);
@@ -281,8 +260,6 @@ public class Applet extends JApplet implements Runnable {
 				
 		        		for (int i = 0; i < scripts.size(); i++)
 		        			scripts.get(i).init(frame);
-		        		
-				
 						
 						frame.setVisible(true);
 						
@@ -312,15 +289,10 @@ public class Applet extends JApplet implements Runnable {
 						sp.setEnabled(true);
 		        		mapList.setEnabled(true);
 		        		freeOrMission.setEnabled(true);
-						
-						
 		        	}
 			        
 		        });
 		        t.start();
-				
-				
-				
 			}
 			
 		});
@@ -345,7 +317,5 @@ public class Applet extends JApplet implements Runnable {
 		p.add(Box.createRigidArea(new Dimension(50,10)));
 		
 		return p;
-		
 	}
 }
-

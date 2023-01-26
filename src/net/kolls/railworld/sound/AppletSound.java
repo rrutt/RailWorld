@@ -30,6 +30,7 @@ import net.kolls.railworld.Sound;
  * @author Steve Kollmansberger
  *
  */
+@SuppressWarnings("removal")
 public class AppletSound extends Sound {
 
 	private AudioClip ac;

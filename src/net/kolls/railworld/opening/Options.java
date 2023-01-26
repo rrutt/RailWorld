@@ -52,7 +52,7 @@ import net.kolls.railworld.Sounds.SoundSystem;
  * @author Steve Kollmansberger
  *
  */
-@SuppressWarnings("serial")
+@SuppressWarnings({ "serial", "removal" })
 public class Options extends JDialog implements ActionListener {
 	
 	private static Preferences prefs;
@@ -68,9 +68,9 @@ public class Options extends JDialog implements ActionListener {
 	 * @see SoundSystem
 	 */
 	public static Sounds.SoundSystem getSoundSystem() {
-		if (prefs == null) return Sounds.SoundSystem.APPLET;
+		if (prefs == null) return Sounds.SoundSystem.STREAM;
 		
-		return Sounds.SoundSystem.values()[prefs.getInt("Sound", Sounds.SoundSystem.APPLET.ordinal())];
+		return Sounds.SoundSystem.values()[prefs.getInt("Sound", Sounds.SoundSystem.STREAM.ordinal())];
 		
 	}
 	

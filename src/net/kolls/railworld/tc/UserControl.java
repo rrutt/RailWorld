@@ -67,10 +67,10 @@ public class UserControl extends TrainControl implements ItemListener, ChangeLis
 		throttle = new JSlider(SwingConstants.VERTICAL, 0, Train.MAX_THROTTLE, 0);
 		// create slider labels
 		Hashtable<Integer,JLabel> h = new Hashtable<Integer,JLabel>();
-		h.put (new Integer (0), new JLabel("IDLE"));
+		h.put (0, new JLabel("IDLE"));
 		
 		for (int i = 1; i <= Train.MAX_THROTTLE; i++) 
-			h.put (new Integer (i), new JLabel(Integer.toString(i)+" ("+Integer.toString(i*(Train.MAX_SPEED_MPH/Train.MAX_THROTTLE))+" MPH)"));
+			h.put (i, new JLabel(Integer.toString(i)+" ("+Integer.toString(i*(Train.MAX_SPEED_MPH/Train.MAX_THROTTLE))+" MPH)"));
 		throttle.setLabelTable(h);
 		throttle.setPaintLabels(true);
 		throttle.setSnapToTicks(true);

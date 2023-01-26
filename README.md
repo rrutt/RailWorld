@@ -28,6 +28,16 @@ RailWorld is open source software under the GNU General Public Licesnse, Version
 
 License details are available in this repository in the file **gpl.txt**
 
+### Running RailWorld
+
+Download the **RailWorld.jar** file.
+
+Then use this command line in a Windows Command Prompt or Linux Terminal window:
+
+    java -jar RailWorld.jar
+
+Depending on how Java is installed on your computer, you may be able to simply double-click on the **JavaWorld.jar** file on a file explorer windo, 
+
 ### Track Maps
 
 The original set of RailWorld maps are available at this web site: <https://www.kolls.net/railworld/maps/>
@@ -41,9 +51,23 @@ The following additional _table top_ model maps are available in the **data** su
 A pair of actual layouts based on satellite imagery are also included:
 
 - **Plymouth** An actual track system centered on a crossing of two main lines in downtown Plymouth, Michigan.
-- **Wixom** An actual track and yard system at the former Ford Motor Company final assembly plant in Wixom, Michigan. The bottom of this layout connects to the top of the **Plymouth** layout. 
+- **Wixom** An actual track and yard system at the former Ford Motor Company final assembly plant in Wixom, Michigan. The bottom of this layout connects to the top of the **Plymouth** layout.
+
+### JavaDoc Class Files Documentation
+
+The JavaDoc generated documentation is available at  **<https://www.kolls.net/railworld/javadoc/>**
 
 ### Change Log
+
+#### Version 1.0.0+20230126
+
+This version has been revised to compile using **JDK version 17 LTS**.
+
+The supplied runnable **RailWorld.jar** file has been compiled using **JDK version 17 LTS**.
+
+The program still uses the deprecated **Applet** and **JApplet** classes, so this version contains corresponding **@SuppressWarnings** annotations in some of the source code files.
+
+The **data** sub-folder now contains the **seattle** and **tumwater** map and image files required for the **Seattle Dispatcher** and **Brewsky Run** mission game scenarios, respectively. 
 
 #### Version 0.9b-RRutt
 

@@ -48,7 +48,6 @@ import net.kolls.railworld.RailCanvas;
 import net.kolls.railworld.RailFrame;
 import net.kolls.railworld.RailSegment;
 import net.kolls.railworld.YesNoCancel;
-import net.kolls.railworld.edit.EditCanvas;
 import net.kolls.railworld.io.MetaData;
 import net.kolls.railworld.io.RWMMapFilter;
 import net.kolls.railworld.io.RWMWriter;

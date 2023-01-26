@@ -160,7 +160,7 @@ public abstract class TrainControl extends JPanel implements Runnable, SaveLoad 
 	
 	private void hIncr(Map<String,Integer> h, String v) {
 		Integer n = h.get(v);
-		if (n == null) h.put(v, new Integer(1)); else h.put(v, new Integer(n.intValue()+1));
+		if (n == null) h.put(v, 1); else h.put(v, n.intValue()+1);
 	}
 	
 	/**
@@ -183,11 +183,11 @@ public abstract class TrainControl extends JPanel implements Runnable, SaveLoad 
 			if (a[i].isLoadable() == false) {
 				
 				hIncr(t,a[i].show()); // total
-				la.put(a[i].show(), new Boolean(false)); // not loadable
+				la.put(a[i].show(), false); // not loadable
 			} else {
 				if (a[i].loaded()) hIncr(l,a[i].show()); // loaded
 				hIncr(t,a[i].show()); // total
-				la.put(a[i].show(), new Boolean(true)); // loadable
+				la.put(a[i].show(), true); // loadable
 			}
 		}	
 		
@@ -270,7 +270,7 @@ public abstract class TrainControl extends JPanel implements Runnable, SaveLoad 
 	public void run() {
 		if (myT == null) return;
 		
-		int ispeed = new Double(myT.vel()).intValue();
+		int ispeed = (int) myT.vel();
 		weight.setText(NumberFormat.getInstance().format(myT.weight()) + " Tons");
 		speed.setText(Integer.toString(ispeed) + " MPH");
 		length.setText(NumberFormat.getInstance().format(myT.length().feet()) + " Feet");
@@ -338,7 +338,7 @@ public abstract class TrainControl extends JPanel implements Runnable, SaveLoad 
 	
 	public Object newInstance() {
 		try {
-			return getClass().newInstance();
+			return getClass().getDeclaredConstructor().newInstance();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}

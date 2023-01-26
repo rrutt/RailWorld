@@ -44,7 +44,7 @@ public class ResourceLoader extends JProgressBar implements Runnable {
 	/**
 	 * When used with an applet, will contain all the loaded maps when finished.
 	 */
-	public MapLoader[] maps;
+	public MapLoader[] maps = {};
 	
 	private Applet a;
 	
@@ -69,10 +69,14 @@ public class ResourceLoader extends JProgressBar implements Runnable {
 		setMinimum(0);
 		// icons, opening or applet, 7 regular sounds, 9 engine sounds,
 		// if applet, however many maps there are
-		String mapp = null;
-		if (a != null) mapp = a.getParameter("MAPS");
+//		String mapp = null;
+//		if (a != null) mapp = a.getParameter("MAPS");
 		String[] mapurls;
-		if (mapp != null) mapurls = mapp.split(","); else mapurls = new String[0];
+//		if (mapp != null) {
+//			mapurls = mapp.split(",");
+//		} else {
+			mapurls = new String[0];
+//		}
 		
 		setMaximum(1+1+7+9+mapurls.length);
 		setValue(0);
@@ -115,13 +119,7 @@ public class ResourceLoader extends JProgressBar implements Runnable {
 			setValue(getValue() + 1);
 		}
 			
-				
 		setValue(getMaximum());
-        
-		
-		
-        
-
 	}
 
 }

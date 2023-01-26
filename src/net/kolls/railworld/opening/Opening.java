@@ -67,26 +67,21 @@ import net.kolls.railworld.play.script.ScriptManager;
  */
 @SuppressWarnings("serial")
 public class Opening extends JFrame implements ActionListener {
-
-	
 	
 	/**
 	 * Current Rail World version
 	 */
-	public static final String version = "0.9b-RRutt";
+	public static final String version = "1.0.0+20230126";
 	
 	private JFrame f;
 	
 	private void run(final RailFrame frame) {
-		
-		
 		
 //		 if we just fire it up in this code, it will be running in the event
 		// loop thread, and block all events!
 		// so we must spawn it into a different thread
         Thread t  = new Thread(new Runnable() {
         	public void run() {
-				
         		
 				frame.setVisible(true);
 				
@@ -103,14 +98,11 @@ public class Opening extends JFrame implements ActionListener {
 				frame.dispose();
 				setVisible(true);
 				
-				
         	}
 	        
         });
         t.start();
 	}
-	
-	
 	
 	
 	/**
@@ -126,8 +118,6 @@ public class Opening extends JFrame implements ActionListener {
 		
 		final ResourceLoader rl = new ResourceLoader(null);
 		rl.setSize(420, 15);
-		
-		
 		
 		rl.addChangeListener(new ChangeListener() {
 
@@ -149,7 +139,6 @@ public class Opening extends JFrame implements ActionListener {
 		
 		Opening o = new Opening();
 		o.setVisible(true);
-		
 	}
 		
 	private void addWidgets(JPanel cp) {
@@ -208,9 +197,6 @@ public class Opening extends JFrame implements ActionListener {
 				    // The "ideal size" is 3 ft/px.  We want to present the default zoom at that size.
 
 				    RailCanvas.zoom = Distance.getDefaultZoom(); 
-
-
-						
 						
 					final BufferedImage fbi = bi;
 					final MetaData fmd = md;
@@ -226,19 +212,9 @@ public class Opening extends JFrame implements ActionListener {
 		    			return;
 		        	}
 		        		
-		        		
 		        	run(frame);
-						
-						
-						
-
-						
-				            
 				  } else
 					f.setVisible(true);
-						
-						
-						
 				}
 	        });
 	        nm.setAlignmentX(Component.RIGHT_ALIGNMENT);
@@ -247,7 +223,6 @@ public class Opening extends JFrame implements ActionListener {
 	        lm.setAlignmentX(Component.RIGHT_ALIGNMENT);
 	        lm.addActionListener(this);
 	        lm.setActionCommand("EditMap");
-	        
 	        
 	        q = new JButton("Quit");
 	        q.addActionListener(new ActionListener() {

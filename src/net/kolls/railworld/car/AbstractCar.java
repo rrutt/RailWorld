@@ -128,7 +128,7 @@ public abstract class AbstractCar implements Car {
 	
 	public Object newInstance() { 
 		try {
-			return getClass().newInstance();
+			return getClass().getDeclaredConstructor().newInstance();
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
