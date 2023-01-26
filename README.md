@@ -41,9 +41,19 @@ The following additional _table top_ model maps are available in the **data** su
 A pair of actual layouts based on satellite imagery are also included:
 
 - **Plymouth** An actual track system centered on a crossing of two main lines in downtown Plymouth, Michigan.
-- **Wixom** An actual track and yard system at the former Ford Motor Company final assembly plant in Wixom, Michigan. The bottom of this layout connects to the top of the **Plymouth** layout. 
+- **Wixom** An actual track and yard system at the former Ford Motor Company final assembly plant in Wixom, Michigan. The bottom of this layout connects to the top of the **Plymouth** layout.
+
+### JavaDoc Class Files Documentation
+
+The JavaDoc generated documentation is available at  **<https://www.kolls.net/railworld/javadoc/>**
 
 ### Change Log
+
+#### Version 1.0.0+20230125
+
+This version has been revised to compile using JDK version 17 LTS.
+
+The program still uses the deprecated **Applet** and **JApplet** classes, so this version contains corresponding **@SuppressWarnings** annotations in some of the source code files. 
 
 #### Version 0.9b-RRutt
 

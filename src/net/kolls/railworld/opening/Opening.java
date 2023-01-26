@@ -119,8 +119,6 @@ public class Opening extends JFrame implements ActionListener {
 		final ResourceLoader rl = new ResourceLoader(null);
 		rl.setSize(420, 15);
 		
-		
-		
 		rl.addChangeListener(new ChangeListener() {
 
 			public void stateChanged(ChangeEvent arg0) {
@@ -141,7 +139,6 @@ public class Opening extends JFrame implements ActionListener {
 		
 		Opening o = new Opening();
 		o.setVisible(true);
-		
 	}
 		
 	private void addWidgets(JPanel cp) {
@@ -200,9 +197,6 @@ public class Opening extends JFrame implements ActionListener {
 				    // The "ideal size" is 3 ft/px.  We want to present the default zoom at that size.
 
 				    RailCanvas.zoom = Distance.getDefaultZoom(); 
-
-
-						
 						
 					final BufferedImage fbi = bi;
 					final MetaData fmd = md;
@@ -218,19 +212,9 @@ public class Opening extends JFrame implements ActionListener {
 		    			return;
 		        	}
 		        		
-		        		
 		        	run(frame);
-						
-						
-						
-
-						
-				            
 				  } else
 					f.setVisible(true);
-						
-						
-						
 				}
 	        });
 	        nm.setAlignmentX(Component.RIGHT_ALIGNMENT);
@@ -239,7 +223,6 @@ public class Opening extends JFrame implements ActionListener {
 	        lm.setAlignmentX(Component.RIGHT_ALIGNMENT);
 	        lm.addActionListener(this);
 	        lm.setActionCommand("EditMap");
-	        
 	        
 	        q = new JButton("Quit");
 	        q.addActionListener(new ActionListener() {
