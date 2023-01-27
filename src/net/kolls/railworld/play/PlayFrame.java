@@ -323,7 +323,7 @@ public class PlayFrame extends RailFrame {
 		
 		
 		JScrollPane scrollPane = new JScrollPane(dataList);
-		scrollPane.setPreferredSize(new Dimension(200,100));
+		scrollPane.setPreferredSize(new Dimension(200,200));
 		
 		JPanel bottom = new JPanel();
 		JPanel btaddrem = new JPanel();
