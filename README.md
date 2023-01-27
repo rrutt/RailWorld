@@ -24,7 +24,7 @@ Rail World includes both the play module and a complete map editor.
 
 ### License
 
-RailWorld is open source software under the GNU General Public Licesnse, Version 2 (GPL 2).
+RailWorld is open source software under the GNU General Public License, Version 2 (GPL 2).
 
 License details are available in this repository in the file **gpl.txt**
 
@@ -58,6 +58,10 @@ A pair of actual layouts based on satellite imagery are also included:
 The JavaDoc generated documentation is available at  **<https://www.kolls.net/railworld/javadoc/>**
 
 ### Change Log
+
+#### Version 1.1.0+20230126
+
+The window layout was rearranged to support smaller netbook display screens.
 
 #### Version 1.0.0+20230126
 
