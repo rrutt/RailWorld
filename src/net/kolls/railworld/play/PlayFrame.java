@@ -304,10 +304,6 @@ public class PlayFrame extends RailFrame {
 		// if no layout, components won't auto size!
 		tch.setLayout(new BoxLayout(tch, BoxLayout.Y_AXIS));
 		
-
-		
-
-		
 		getContentPane().add(jdb); // defaults to center
 
 		rightPanel.add(tch);

@@ -59,6 +59,10 @@ The JavaDoc generated documentation is available at  **<https://www.kolls.net/ra
 
 ### Change Log
 
+#### Version 1.1.1+20230127
+
+Cosmetic correction of visual padding to train control panel.
+
 #### Version 1.1.0+20230126
 
 The window layout was rearranged to support smaller netbook display screens.
