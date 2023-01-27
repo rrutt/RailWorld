@@ -304,10 +304,6 @@ public class PlayFrame extends RailFrame {
 		// if no layout, components won't auto size!
 		tch.setLayout(new BoxLayout(tch, BoxLayout.Y_AXIS));
 		
-
-		
-
-		
 		getContentPane().add(jdb); // defaults to center
 
 		rightPanel.add(tch);
@@ -327,7 +323,7 @@ public class PlayFrame extends RailFrame {
 		
 		
 		JScrollPane scrollPane = new JScrollPane(dataList);
-		scrollPane.setPreferredSize(new Dimension(200,100));
+		scrollPane.setPreferredSize(new Dimension(200,200));
 		
 		JPanel bottom = new JPanel();
 		JPanel btaddrem = new JPanel();

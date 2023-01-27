@@ -86,10 +86,6 @@ public abstract class RailFrame extends JFrame implements ActionListener, Window
 		setLocationRelativeTo(null);
 		setIconImage(Images.frameIcon);
 		
-
-		
-		
-		
 		miniv = new MiniViewer();
 		miniv.setPreferredSize(new Dimension(195,195));
 		miniv.setMaximumSize(new Dimension(195,195));
@@ -104,19 +100,17 @@ public abstract class RailFrame extends JFrame implements ActionListener, Window
 		mp.add(miniv);
 		leftPanel.add(mp, BorderLayout.NORTH);
 		
+		rightPanel = new JPanel();
+		rightPanel.setLayout(new BorderLayout());
+		
 		// since tch looks ugly butting up against the edge,
 		// add filler
 		JPanel jp = new JPanel();
 		jp.setPreferredSize(new Dimension(5,5));
-		leftPanel.add(jp, BorderLayout.WEST);
+		rightPanel.add(jp, BorderLayout.WEST);
 		jp = new JPanel();
 		jp.setPreferredSize(new Dimension(5,5));
-		leftPanel.add(jp, BorderLayout.EAST);
-		
-		
-		rightPanel = new JPanel();
-		rightPanel.setLayout(new BorderLayout());
-		
+		rightPanel.add(jp, BorderLayout.EAST);
 		
 		getContentPane().setLayout(new BorderLayout());
 		getContentPane().add(leftPanel, BorderLayout.WEST);
