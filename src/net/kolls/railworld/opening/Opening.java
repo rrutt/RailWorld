@@ -71,7 +71,7 @@ public class Opening extends JFrame implements ActionListener {
 	/**
 	 * Current Rail World version
 	 */
-	public static final String version = "1.1.1+20230127";
+	public static final String version = "1.1.2+20230129";
 	
 	private JFrame f;
 	
@@ -256,9 +256,9 @@ public class Opening extends JFrame implements ActionListener {
 	       verp.setLayout(new BoxLayout(verp, BoxLayout.LINE_AXIS));
 	       verp.setOpaque(false);
 
-	       verp.add(new JLabel("Rail World Version "+version));
+	       verp.add(new JLabel(" Rail World Version " + version + " "));
 	       verp.add(Box.createHorizontalGlue());
-	       verp.add(new JLabel("http://www.kolls.net/railworld"));
+	       verp.add(new JLabel(" https://github.com/rrutt/RailWorld "));
 	        
 	        
 	       cp.add(verp, BorderLayout.SOUTH);
