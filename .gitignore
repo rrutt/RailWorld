@@ -1,2 +1,5 @@
 bin
 *.rwg
+/nbproject/private/
+/build/
+/dist/
